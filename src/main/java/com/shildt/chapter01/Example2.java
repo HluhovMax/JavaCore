@@ -13,6 +13,5 @@ public class Example2 {
 
         System.out.println("value of num  now equals");
         System.out.println(num);
-
     }
 }
