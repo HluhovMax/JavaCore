@@ -1,4 +1,4 @@
-package com.shildt.chapter01;
+package com.shildt.chapter02;
 
 /**
  * Created by Max Hluhov on 23.08.2018.
