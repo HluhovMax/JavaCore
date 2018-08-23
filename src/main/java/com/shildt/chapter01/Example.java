@@ -8,5 +8,6 @@ public class Example {
         System.out.println("Простая программа на Java");
         System.out.println("Simple");
         System.out.println("/************************/");
+        System.out.println("In the master branch");
     }
 }
