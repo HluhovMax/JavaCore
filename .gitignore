@@ -1,5 +1,5 @@
 .idea/*
-src/main/java/com/shildt/practice/*
+practice/*
 *.class
 
 *.war
