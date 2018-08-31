@@ -154,8 +154,9 @@ public class GameLogic {
                         break;
                 }
                 break;
-            case 2:
-
+            default:
+                System.out.println("now game available only if you enter '1' for begin))");
+                break;
         }
     }
 }
