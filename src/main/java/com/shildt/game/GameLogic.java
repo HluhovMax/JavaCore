@@ -27,23 +27,23 @@ public class GameLogic {
         switch (i) {
             case 1:
                 field.c[0] = x;
+                System.out.println(human + m);
                 field.showField();
                 field.c[2] = o;
                 System.out.println(ai + m);
                 field.showField();
                 System.out.println(human + text + " from 4-6***");
-                Scanner scanner1 = new Scanner(System.in);
-                int i1 = scanner1.nextInt();
+                int i1 = scanner.nextInt();
                 switch (i1) {
                     case 4:
                         field.c[3] = x;
                         field.showField();
+                        System.out.println(human + m);
                         field.c[6] = o;
                         System.out.println(ai + m);
                         field.showField();
                         System.out.println("If you want to win, maybe, you should enter 5!");
-                        Scanner scanner2 = new Scanner(System.in);
-                        int i2 = scanner2.nextInt();
+                        int i2 = scanner.nextInt();
                         if (i2 == 5) {
                             field.c[4] = x;
                             System.out.println("You are so clever man!");
@@ -67,13 +67,13 @@ public class GameLogic {
                         break;
                     case 5:
                         field.c[4] = x;
+                        System.out.println(human + m);
                         field.showField();
                         field.c[8] = o;
                         System.out.println(ai + m);
                         field.showField();
                         System.out.println("If you want to win, maybe, you should enter 6!");
-                        Scanner scanner3 = new Scanner(System.in);
-                        int i3 = scanner3.nextInt();
+                        int i3 = scanner.nextInt();
                         if (i3 == 6) {
                             field.c[5] = x;
                             field.showField();
@@ -81,11 +81,9 @@ public class GameLogic {
                             field.c[3] = o;
                             System.out.println(ai + m);
                             field.showField();
-                            //
                             System.out.println(human + " you have one unread message from: " + ai);
                             System.out.println("If " + human + " want to read enter '1'.");
-                            Scanner sc = new Scanner(System.in);
-                            int answer = sc.nextInt();
+                            int answer = scanner.nextInt();
                             switch (answer) {
                                 case 1:
                                     System.out.println(human + " hello, it is " + ai + " we have some system error... ");
@@ -95,12 +93,12 @@ public class GameLogic {
                             }
                             System.out.println(yoda + ": look, " + human + " it is only your chose, who wins today the power of Light or Darkness!");
                             System.out.println("So, " + human + ", your move: ");
-                            Scanner scan = scanner3;
-                            //Попереприсваивать сканеры
+                            Scanner scan = scanner;
                             int i4 = scan.nextInt();
                             switch (i4) {
                                 case 2:
                                     field.c[1] = x;
+                                    System.out.println(human + m);
                                     field.showField();
                                     field.c[6] = o;
                                     System.out.println(ai + m);
@@ -115,6 +113,45 @@ public class GameLogic {
                                     System.out.println(yoda + ": congratulations " + human + " today the forces of Light won!!!");
                             }
                         }
+                        break;
+                    case 6:
+                        field.c[5] = x;
+                        System.out.println(human + m);
+                        field.showField();
+                        field.c[6] = o;
+                        System.out.println(ai + ": aha... Let's think...");
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(ai + ": your move Fresh Meat");
+                        System.out.println(yoda + ": be careful, he's very insolent");
+                        System.out.println(human + ": with power of light-sword I'll do that!");
+                        System.out.println(human + text + " it must be 5!!!");
+                        int i4 = scanner.nextInt();
+                        if (i4 == 5) {
+                            field.c[4] = x;
+                            System.out.println(human + m);
+                            field.showField();
+                        } else {
+                            System.out.println(ai + ": in that case I'll win!!!");
+                        }
+                        field.c[3] = o;
+                        System.out.println(ai + ": ahaa, game over for, you'll never win!!!");
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + ": haha!");
+                        System.out.println(human + ": the game will end when i want ");
+                        System.out.println("To win, please, enter 9");
+                        int i5 = scanner.nextInt();
+                        if (i5 == 9) {
+                            field.c[8] = x;
+                            System.out.println(human + m);
+                            field.showField();
+                            System.out.println("***************");
+                            field.c[0] = field.c[4] = field.c[8] = '*';
+                            field.showField();
+                            System.out.println(yoda + ": Congratulations " + human + " victory, today, is our!!!");
+                        }
+                        break;
                 }
                 break;
             case 2:
