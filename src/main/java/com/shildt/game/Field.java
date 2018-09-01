@@ -4,7 +4,7 @@ package com.shildt.game;
  * Created by Max Hluhov on 30.08.2018.
  */
 public class Field {
-     char[] c = {'+', '+', '+', '+', '+', '+', '+', '+', '+'};
+     private char[] c = {'+', '+', '+', '+', '+', '+', '+', '+', '+'};
 
 
     void showField() {
@@ -25,7 +25,13 @@ public class Field {
         System.out.println();
     }
 
-//    public void setC(char[] c) {
-//        this.c = c;
-//    }
+    void setC(int i, char symbol) {
+        this.c[i] = symbol;
+    }
+
+    void setC(int i, int j, int k, char symbol) {
+        this.c[i] = symbol;
+        this.c[j] = symbol;
+        this.c[k] = symbol;
+    }
 }
