@@ -6,15 +6,15 @@ import java.util.Scanner;
  * Created by Max Hluhov on 30.08.2018.
  */
 public class GameLogic {
-    private char x = 'X';
-    private char o = 'O';
+    private char x = 'X';// variable for Human-player
+    private char o = 'O';// variable for Artificial Intelligence
     Field field;
-    private String text = " , please, chose your next position";
+    private String text = " , please, chose your next position";// some staff variables for fun))
     private String ai = "Artificial Intelligence";
     private String m = " move: ";
     private String human = "Human";
     private String yoda = "Yoda";
-    public void start() {
+    public void start() {// Game logic method
         field = new Field();
         System.out.println("Welcome to the Star Wars Tic-Tac-Toe game!");
         System.out.println(ai + ": " + "Today, I will definitely win! hahaha");
@@ -282,6 +282,138 @@ public class GameLogic {
                             field.showField();
                             System.out.println(ai + " winner!!!");
                         }
+                        break;
+                    default:
+                        System.out.println("Please, enter value from 1-3.");
+                        break;
+                }
+                break;
+            case 3:
+                field.setC(2, x);
+                System.out.println(human + m);
+                field.showField();
+                field.setC(5, o);
+                System.out.println(ai + m);
+                field.showField();
+                System.out.println(human + " chose your next position: ");
+                int i3 = scanner.nextInt();
+                switch (i3) {
+                    case 1:
+                        field.setC(0, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(1, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i4 = scanner.nextInt();
+                        if (i4 == 5) {
+                            field.setC(4, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(6, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            int i5 = scanner.nextInt();
+                            if (i5 == 9) {
+                                field.setC(8, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                field.setC(8, o);
+                                System.out.println(ai + m);
+                                field.showField();
+                                System.out.println(ai + ": draw!!!");// draw==friendship
+                            }
+                        } else {
+                            System.out.println("It is very bad idea!");
+                        }
+                        break;
+                    case 2:
+                        field.setC(1, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(0, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i5 = scanner.nextInt();
+                        if (i5 == 5) {
+                            field.setC(4, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(7, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(human + " chose your next position: ");
+                            int i6 = scanner.nextInt();
+                            if (i6 == 7) {
+                                field.setC(6, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                System.out.println(ai + ": draw!!!");
+                            }
+                        } else {
+                            System.out.println(ai + ": draw!!!");
+                        }
+                        break;
+                    case 5:
+                        field.setC(4, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(6, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        System.out.println("For sure, it should be '1'");
+                        int i6 = scanner.nextInt();
+                        if (i6 == 1) {
+                            field.setC(0, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(1, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(human + " chose your next position: ");
+                            int i7 = scanner.nextInt();
+                            if (i7 == 9) {
+                                field.setC(8, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                System.out.println("Don't be so stupid!!!");
+                            }
+                        } else {
+                            System.out.println(ai + ": draw!!!");
+                        }
+                        break;
+                    case 7:
+                        field.setC(6, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(4, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i7 = scanner.nextInt();
+                        if (i7 == 1) {
+                            field.setC(0, x);
+                            System.out.println(human + m);
+                            field.setC(3, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(ai + " winner!!!");
+                        } else {
+                            System.out.println(ai + ": draw!!!");
+                        }
+                        break;
+                    default:
+                        System.out.println("Please, chose another position!");
+                        break;
                 }
             default:
                 System.out.println("|***************|");
