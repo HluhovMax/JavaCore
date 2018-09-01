@@ -26,7 +26,7 @@ public class GameLogic {
         int i = scanner.nextInt();
         switch (i) {
             case 1:
-                field.c[0] = x;
+                field.c[0]= x;
                 System.out.println(human + m);
                 field.showField();
                 field.c[2] = o;
