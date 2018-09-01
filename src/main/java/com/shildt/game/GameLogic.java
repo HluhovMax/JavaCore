@@ -158,9 +158,134 @@ public class GameLogic {
                 field.setC(1, x);
                 System.out.println(human + m);
                 field.showField();
-
+                field.setC(7, o);
+                System.out.println(ai + m);
+                field.showField();
+                System.out.println(human + text + " from 4-6***");
+                System.out.println("So your " + m + " " + human);
+                int i2 = scanner.nextInt();
+                switch (i2) {
+                    case 4:
+                        field.setC(3, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(8, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i3 = scanner.nextInt();
+                        if (i3 == 7) {
+                            field.setC(6, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(4, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(human + " chose your next position: ");
+                            int i4 = scanner.nextInt();
+                            if (i4 == 1) {
+                                field.setC(0, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println("***************");
+                                field.setC(0, 3, 6, '|');
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                field.setC(0, o);
+                                System.out.println(ai + ": in that case I'll win!!!");
+                                field.showField();
+                                System.out.println("***************");
+                                field.setC(0, 4, 8, '*');
+                                field.showField();
+                                System.out.println(ai + " winner!!!");
+                            }
+                        } else {
+                            field.setC(6, o);
+                            System.out.println(ai + ": in that case I'll win!");
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(ai + " winner today!!!");
+                        }
+                        break;
+                    case 5:
+                        field.setC(4, x);
+                        field.setC(8, o);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i4 = scanner.nextInt();
+                        if (i4 == 7) {
+                            field.setC(6, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(5, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(human + " chose your next position: ");
+                            int i5 = scanner.nextInt();
+                            if (i5 == 3) {
+                                field.setC(2, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println("***************");
+                                field.setC(2, 4, 6, '/');
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                field.setC(2, o);
+                                System.out.println(ai + ": in that case I'll win!!!");
+                                System.out.println(ai + m);
+                                field.showField();
+                                System.out.println(ai + " winner!!!");
+                            }
+                        } else {
+                            field.setC(6, o);
+                            System.out.println(ai + ": in that case I'll win!!!");
+                            System.out.println(ai + m);
+                            field.showField();
+                        }
+                        break;
+                    case 6:
+                        field.setC(5, x);
+                        System.out.println(human + m);
+                        field.showField();
+                        field.setC(6, o);
+                        System.out.println(ai + m);
+                        field.showField();
+                        System.out.println(human + " chose your next position: ");
+                        int i5 = scanner.nextInt();
+                        if (i5 == 9) {
+                            field.setC(8, x);
+                            System.out.println(human + m);
+                            field.showField();
+                            field.setC(4, o);
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(human + " chose your next position: ");
+                            int i6 = scanner.nextInt();
+                            if (i6 == 3) {
+                                field.setC(2, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                System.out.println(human + " winner!!!");
+                            } else {
+                                field.setC(2, o);
+                                System.out.println(ai + ": in that case I'll win!!!");
+                                System.out.println(ai + m);
+                                field.showField();
+                                System.out.println(ai + " winner!!!");
+                            }
+                        } else {
+                            field.setC(8, o);
+                            System.out.println(ai + ": in that case I'll win!!!");
+                            System.out.println(ai + m);
+                            field.showField();
+                            System.out.println(ai + " winner!!!");
+                        }
+                }
             default:
-                System.out.println("now game available only if you enter '1' for begin))");
+                System.out.println("|***************|");
+                System.out.println("Please start game again and enter value from 1-3.");
                 break;
         }
     }
