@@ -21,7 +21,7 @@ public class Field {
         }
     }
 
-    void setSymbolByIndex(int i, char symbol) {
+    void setSymbolToArrayByIndex(int i, char symbol) {
         this.c[i] = symbol;
     }// setter for set symbol by index to array
 
