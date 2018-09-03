@@ -61,12 +61,6 @@ public class GameLogic {
                             field.showField();
                             checkWin(field);
                             System.out.println(human + " today Dark Forces on your side!");
-                        } else {
-                            field.setSymbolToArrayByIndex(4, o);
-                            System.out.println(human + " you are a Big Big looser:((");
-                            field.setSymbolByIndex(2, 4, 6, '/');
-                            field.showField();
-                            System.out.println(ai + " Good job!");
                         }
                         break;
                     case 5:
@@ -132,23 +126,23 @@ public class GameLogic {
                             field.setSymbolToArrayByIndex(4, x);
                             System.out.println(human + m);
                             field.showField();
-                        } else {
-                            System.out.println(ai + ": in that case I'll win!!!");
-                        }
-                        field.setSymbolToArrayByIndex(3, o);
-                        System.out.println(ai + ": ahaa, game over , you'll never win!!!");
-                        System.out.println(ai + m);
-                        field.showField();
-                        System.out.println(human + ": haha!");
-                        System.out.println(human + ": the game will end when i want ");
-                        System.out.println("To win, please, enter 9");
-                        int i5 = scanner.nextInt();
-                        if (i5 == 9) {
-                            field.setSymbolToArrayByIndex(8, x);
-                            System.out.println(human + m);
+                            field.setSymbolToArrayByIndex(3, o);
+                            System.out.println(ai + ": ahaa, game over , you'll never win!!!");
+                            System.out.println(ai + m);
                             field.showField();
-                            checkWin(field);
-                            System.out.println(yoda + ": Congratulations " + human + " victory, today, is our!!!");
+                            System.out.println(human + ": haha!");
+                            System.out.println(human + ": the game will end when i want ");
+                            System.out.println("To win, please, enter 9");
+                            int i5 = scanner.nextInt();
+                            if (i5 == 9) {
+                                field.setSymbolToArrayByIndex(8, x);
+                                System.out.println(human + m);
+                                field.showField();
+                                checkWin(field);
+                                System.out.println(yoda + ": Congratulations " + human + " victory, today, is our!!!");
+                            }
+                        } else {
+                            System.out.println(" end of the game!!!");
                         }
                         break;
                 }
@@ -361,14 +355,14 @@ public class GameLogic {
     }
 
     void checkWin(Field f) {
-        if (((f.c[0] == 'X') && (f.c[1] == 'X') && (f.c[2] == 'X'))
-                || ((f.c[3] == 'X') && (f.c[4] == 'X') && (f.c[5] == 'X'))
-                || ((f.c[6] == 'X') && (f.c[7] == 'X') && (f.c[8] == 'X'))
-                || ((f.c[0] == 'X') && (f.c[3] == 'X') && (f.c[6] == 'X'))
-                || ((f.c[1] == 'X') && (f.c[4] == 'X') && (f.c[7] == 'X'))
-                || ((f.c[2] == 'X') && (f.c[5] == 'X') && (f.c[8] == 'X'))
-                || ((f.c[0] == 'X') && (f.c[4] == 'X') && (f.c[8] == 'X'))
-                || ((f.c[2] == 'X') && (f.c[4] == 'X') && (f.c[6] == 'X'))) {
+        if ((f.showIndexOfArray(0, x) && f.showIndexOfArray(1, x) && f.showIndexOfArray(2, x))
+                || (f.showIndexOfArray(3, x) && f.showIndexOfArray(4, x) && f.showIndexOfArray(5, x))
+                || (f.showIndexOfArray(6, x) && f.showIndexOfArray(7, x) && f.showIndexOfArray(8, x))
+                || (f.showIndexOfArray(0, x) && f.showIndexOfArray(3, x) && f.showIndexOfArray(6, x))
+                || (f.showIndexOfArray(1, x) && f.showIndexOfArray(4, x) && f.showIndexOfArray(7, x))
+                || (f.showIndexOfArray(2, x) && f.showIndexOfArray(5, x) && f.showIndexOfArray(8, x))
+                || (f.showIndexOfArray(0, x) && f.showIndexOfArray(4, x) && f.showIndexOfArray(8, x))
+                || (f.showIndexOfArray(2, x) && f.showIndexOfArray(4, x) && f.showIndexOfArray(6, x))) {
             System.out.println(human + " winner!!!");
         } else {
             System.out.println(ai + " winner!!!");
