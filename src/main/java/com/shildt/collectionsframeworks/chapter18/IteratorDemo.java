@@ -43,7 +43,7 @@ public class IteratorDemo {
         System.out.print("Changed list redirection: ");
         while (litr.hasPrevious()) {
             String el = litr.previous();
-            System.out.println(el+" ");
+            System.out.print(el+" ");
         }
         System.out.println();
     }
