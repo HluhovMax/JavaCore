@@ -5,7 +5,7 @@ package com.shildt.myCollection;
  */
 public class MyCollectionMain {
     public static void main(String[] args) {
-        MyCollection<Integer> collection = new MyCollection<>();
+        MyCollection collection = new MyCollection();
         collection.add(6);
         collection.add(7);
         collection.add(8);
@@ -13,8 +13,10 @@ public class MyCollectionMain {
         collection.add(78);
         collection.add(23);
         collection.add(-5);
+        collection.add(98);
+        collection.add(-58);
 
-        System.out.println("size: " + collection.size());
+       /* System.out.println("size: " + collection.size());
         for (int i = 0; i < collection.size(); i++) {
             System.out.print("[" + collection.get(i) + "]" + " ");
         }
@@ -31,6 +33,10 @@ public class MyCollectionMain {
         for (int i = 0; i < collection.size(); i++) {
             System.out.print("[" + collection.get(i) + "]" + " ");
         }
-
+        System.out.println();
+        collection.findMax();
+        collection.findMin();
+        collection.findAverage(); */
+        collection.findByValue(-5);
     }
 }
