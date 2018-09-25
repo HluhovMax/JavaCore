@@ -5,12 +5,6 @@ package com.shildt.myCollection;
  */
 
 import java.util.Arrays;
-
-/**
- * добавить методы на нахожденеие
- * нахождения элемента по значению.
- *
- */
 public class MyCollection {
     private final int INIT_SIZE = 16;
     private int [] array;
@@ -25,7 +19,7 @@ public class MyCollection {
         array = new int[capacity];
     }
 
-    public void showArray() {
+    public void showMyCollection() {
         for (int i = 0; i < array.length; i++) {
             System.out.print("[" + array[i] + "]");
         }
@@ -41,8 +35,15 @@ public class MyCollection {
         }
     }
 
-    public int get(int index) {// method for taking element from collection by index
-        return  array[index];
+    public void addWithIncrement(int value) {
+        for (int i = 0; i <array.length ; i++) {
+            array[i] += value;
+        }
+    }
+
+    public void get(int index) {// method for taking element from collection by index
+        int i = array[index];
+        System.out.println("value = " + i);
     }
 
     public void remove(int index) {// method to deleting element from collection by index
@@ -51,6 +52,12 @@ public class MyCollection {
         }
         array[pointer] = 0;
         pointer--;
+    }
+
+    public void removeWithDecrement(int value) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] -= value;
+        }
     }
 
     private void resize() {// method to make collection bigger
@@ -88,22 +95,18 @@ public class MyCollection {
         System.out.println("average value of array: " + average);
     }
 
-    public void findByValue(int value) {
-        System.out.print("non sorted array: ");
-        showArray();
-//        boolean contains = IntStream.of(array).anyMatch(x -> x == value);
-//        System.out.println(contains);
-        Arrays.sort(array, 0, 8);//передать в параметр to индекс последнего текущего элемента
-        System.out.print("sorted array: ");
-        showArray();
+    public void findByValueInSortedArray(int value) {
+        sort();
         int index = Arrays.binarySearch(array, value);
         System.out.println("index of the sought value: " + index);
     }
 
-
-    public int size() {// to take current capacity from collection
-        return pointer;
+    public void size() {// to take current capacity from collection
+        System.out.println("current size of array: " + array.length);
     }
 
+    public void sort() {
+        Arrays.sort(array, 0, array.length);
+    }
 
 }
