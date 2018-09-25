@@ -13,9 +13,24 @@ import java.util.Arrays;
  */
 public class MyCollection {
     private final int INIT_SIZE = 16;
-    private int [] array = new int[INIT_SIZE];
+    private int [] array;
     private int pointer = 0;
     private int max = 0;
+
+    MyCollection() {
+        array = new int[INIT_SIZE];
+    }
+
+    MyCollection(int capacity) {
+        array = new int[capacity];
+    }
+
+    public void showArray() {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("[" + array[i] + "]");
+        }
+        System.out.println();
+    }
 
     public void add(Integer item) {// method for adding element to collection
         if (item != null) {// checking for null
@@ -74,16 +89,21 @@ public class MyCollection {
     }
 
     public void findByValue(int value) {
+        System.out.print("non sorted array: ");
+        showArray();
 //        boolean contains = IntStream.of(array).anyMatch(x -> x == value);
 //        System.out.println(contains);
-        Arrays.sort(array);
-       int index = Arrays.binarySearch(array, value);
-       System.out.println(index);
+        Arrays.sort(array, 0, 8);//передать в параметр to индекс последнего текущего элемента
+        System.out.print("sorted array: ");
+        showArray();
+        int index = Arrays.binarySearch(array, value);
+        System.out.println("index of the sought value: " + index);
     }
 
 
     public int size() {// to take current capacity from collection
         return pointer;
     }
+
 
 }
