@@ -26,18 +26,15 @@ public class MyCollection {
         System.out.println();
     }
 
-    public void add(Integer item) {// method for adding element to collection
+    public void addWithIncrement(Integer item) {// method for adding element to collection
         if (item != null) {// checking for null
             if (pointer == array.length - 1) {
                 resize();
             }
             array[pointer++] = item;
-        }
-    }
-
-    public void addWithIncrement(int value) {
-        for (int i = 0; i <array.length ; i++) {
-            array[i] += value;
+            for (int i = 0; i <array.length ; i++) {
+                array[i] += item;
+            }
         }
     }
 
@@ -46,17 +43,14 @@ public class MyCollection {
         System.out.println("value = " + i);
     }
 
-    public void remove(int index) {// method to deleting element from collection by index
+    public void removeWithDecrement(int index) {// method to deleting element from collection by index
         for (int i = index; i < pointer; i++) {
             array[i] = array[i + 1];
         }
         array[pointer] = 0;
         pointer--;
-    }
-
-    public void removeWithDecrement(int value) {
         for (int i = 0; i < array.length; i++) {
-            array[i] -= value;
+            array[i] -= index;
         }
     }
 
