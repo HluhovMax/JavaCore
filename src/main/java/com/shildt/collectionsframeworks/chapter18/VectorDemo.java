@@ -16,6 +16,6 @@ public class VectorDemo {
         v.addElement(3);
         v.addElement(4);
 
-        System.out.println("capacity after adding 4 elements: " + v.capacity());
+        System.out.println("capacity after addingToLastPosition 4 elements: " + v.capacity());
     }
 }

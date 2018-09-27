@@ -26,7 +26,7 @@ public class MyCollection {
         System.out.println();
     }
 
-    public void addWithIncrement(Integer item) {// method for adding element to collection
+    public void addWithIncrement(Integer item) {// method for addingToLastPosition element to collection
         if (item != null) {// checking for null
             if (pointer == array.length - 1) {
                 resize();
