@@ -5,12 +5,8 @@ package com.shildt.myCollection;
  */
 public class Main {
     public static void main(String[] args) {
-        MyQue myQue = new MyQue(9);
+        MyQue que = new MyQue();
 
-        myQue.random();
-        myQue.sort();
-        myQue.add(66);
-        myQue.add(88);
-        myQue.findByValueInSortedArray(66);
+
     }
 }
