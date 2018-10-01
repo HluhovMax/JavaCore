@@ -1,7 +1,7 @@
-package com.shildt.chapter10;
+package com.shildt.exceptions;
 
 /**
- * Created by Max Hluhov on 05.09.2018.
+ * Created by Max Hluhov on 01.10.2018.
  */
 public class SuperSubCatch {
     public static void main(String[] args) {
