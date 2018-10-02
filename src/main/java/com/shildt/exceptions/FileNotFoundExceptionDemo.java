@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class FileNotFoundExceptionDemo {
     public static void main(String[] args) throws IOException {
-        File file = new File("C:\\Users\\Max Hluhov\\IdeaProjects\\JavaCore\\src\\main\\java\\com\\shildt\\exceptions\\nullfile.txt");
+        File file = new File("C:\\Users\\Max Hluhov\\IdeaProjects\\JavaCore\\src\\main\\java\\com\\shildt\\exceptions\\nullfile");
         FileReader fileReader = new FileReader(file);
 
         char[] chars = new char[100];
