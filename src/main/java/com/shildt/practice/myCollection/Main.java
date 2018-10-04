@@ -1,4 +1,4 @@
-package com.shildt.myCollection;
+package com.shildt.practice.myCollection;
 
 /**
  * Created by Max Hluhov on 28.09.2018.

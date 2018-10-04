@@ -1,4 +1,4 @@
-package com.shildt.game;
+package com.shildt.practice.game;
 
 import java.util.Scanner;
 

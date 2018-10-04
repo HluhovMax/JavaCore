@@ -1,4 +1,4 @@
-package com.shildt.game;
+package com.shildt.practice.game;
 
 /**
  * Created by Max Hluhov on 30.08.2018.

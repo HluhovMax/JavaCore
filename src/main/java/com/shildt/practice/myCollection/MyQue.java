@@ -1,4 +1,4 @@
-package com.shildt.myCollection;
+package com.shildt.practice.myCollection;
 
 import java.util.Arrays;
 import java.util.Scanner;
