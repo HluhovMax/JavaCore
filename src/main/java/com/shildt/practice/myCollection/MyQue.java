@@ -1,5 +1,7 @@
 package com.shildt.practice.myCollection;
 
+import com.shildt.practice.myexception.MyExcept;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -18,8 +20,14 @@ public class MyQue {
         collection = new int[n];
     }
 
-    public void add(Integer value) {
-        if (value == 0) throw new NullPointerException();
+    public void add(Integer value) throws MyExcept {
+        try {
+            if (value == 0) {
+                throw new MyExcept();
+            }
+        } catch (MyExcept except) {
+            System.out.println("you entered a zero");
+        }
         int temp = value;
         System.out.println("Adding: " + temp + " to tail.");
         tail = collection.length - 1;
