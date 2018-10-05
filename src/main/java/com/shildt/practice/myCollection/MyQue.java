@@ -20,7 +20,7 @@ public class MyQue {
         collection = new int[n];
     }
 
-    public void add(Integer value) throws MyExcept {
+    public void add(Integer value) throws MyExcept {// telling that this method will throws Exception
         try {
             if (value == 0) {
                 throw new MyExcept();
