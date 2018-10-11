@@ -1,4 +1,4 @@
-package com.shildt.chapter22;
+package com.shildt.chapter22web;
 
 import java.io.InputStream;
 import java.net.URL;

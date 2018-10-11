@@ -1,4 +1,4 @@
-package com.shildt.chapter22;
+package com.shildt.chapter22web;
 
 import java.net.MalformedURLException;
 import java.net.URL;
