@@ -1,6 +1,7 @@
 package com.shildt.algorithms.sorting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -79,22 +80,30 @@ public class SortingClass {
         /** INSERTION_SORTING */
         insertionSort(list);// using insertion sorting for list typo ArrayList.
         for (Integer el : list) {
-            System.out.print(el + " ");
+            System.out.print("[" + el + "]");
         }
         System.out.println();
+
         int[] arr = convertIntegers(list);// converting ArrayList to integers array.
         /** SELECTION_SORTING */
         selectionSort(arr);// using selection sorting for array.
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("[" + arr[i] + "]");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
+
         /** BUBBLE_SORTING */
         arr = convertIntegers(list);
         bubbleSort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("[" + arr[i] + "]");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
+
+        /** MERGE_SORTING */
+        MergeClass mc = new MergeClass();
+        mc.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
+        /** QUICK_SORTING */
+        QuickSortClass qs = new QuickSortClass();
+        int array[] = {2, 1, 45, 67, 33, 89, 23, 0};
+        System.out.println(Arrays.toString(array));
+        qs.quickSort(array);
+        System.out.println(Arrays.toString(array));
     }
 }
